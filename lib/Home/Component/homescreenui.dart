@@ -18,13 +18,33 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
         body: Container(
           /*ye container screen ke complete background ke liye he */
           width: double.infinity,
-          // decoration: BoxDecoration(
-          //   gradient: AlignmentGeometry(
-          //
-          //   )
-          // ),
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  /*Light gray or charcoal gray, Turquoise, Golden yellow, Umber, Blue, Pastel pink, White, Black, and Orange.
+*/
+                  begin: Alignment.topCenter,
+                  // tileMode: TileMode.mirror,
+
+                  transform: GradientRotation(
+                    5, // double.infinity,
+                  ),
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    // Color(0xff19F3DC),
+                    // Colors.blue,
+                    Colors.black12,
+
+
+                    Color(0xff960F0F),// Color(0xffF8CADD),
+                    Color(0xff6E260E),
+
+                    Colors.blueGrey
+                    // Colors.blueAccent.shade700,
+                    // Color(0xff31A3C6),
+
+                // Colors.deepOrange,
+              ])),
           height: double.infinity,
-          color: Color(0xff282828),
           child: Column(
             /*ye column se start he ui */
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -346,34 +366,64 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                   ],
                 ),
               ),
-              Row(
-                // mainAxisAlignment: MainAxisAlignment.,
-                children: [
-                  Container(
-                    height: 90,
-                    width: 120,
-                    decoration: BoxDecoration(
-                      color: Colors.red.shade50,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.red,width: 1),
+              SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 60,
+                      width: 120,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            'Man Family Wines, Pinoitage\nBosstok 2024',
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          ),
+                          Text(
+                            'Red Wines,',
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          ),
+                          Text(
+                            'South Africa',
+                            style: TextStyle(color: Colors.pink, fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Column(
-                          children: [
-                            Text('Man Family Wines,Pinotage,\n,BossTok,2024',style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 10,
-                            ),)
-                          ],
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              )
-
+                  ],
+                ),
+              ),
+              /*take 5 / trail 7 */
+              // Row(
+              //   // mainAxisAlignment: MainAxisAlignment.,
+              //   children: [
+              //     Container(
+              //       height: 90,
+              //       width: 120,
+              //       decoration: BoxDecoration(
+              //         color: Colors.red.shade50,
+              //         borderRadius: BorderRadius.circular(10),
+              //         border: Border.all(color: Colors.red,width: 1),
+              //       ),
+              //       child: Row(
+              //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //         children: [
+              //           Column(
+              //             children: [
+              //               Text('Man Family Wines,Pinotage,\n,BossTok,2024',style: TextStyle(
+              //                 color: Colors.white,
+              //                 fontSize: 10,
+              //               ),)
+              //             ],
+              //           )
+              //         ],
+              //       ),
             ],
           ),
         ),
