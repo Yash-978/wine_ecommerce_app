@@ -30,17 +30,16 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                   ),
                   end: Alignment.bottomCenter,
                   colors: [
-                    // Color(0xff19F3DC),
-                    // Colors.blue,
-                    Colors.black12,
+                // Color(0xff19F3DC),
+                // Colors.blue,
+                Colors.black12,
 
+                Color(0xff960F0F), // Color(0xffF8CADD),
+                Color(0xff6E260E),
 
-                    Color(0xff960F0F),// Color(0xffF8CADD),
-                    Color(0xff6E260E),
-
-                    Colors.blueGrey
-                    // Colors.blueAccent.shade700,
-                    // Color(0xff31A3C6),
+                Colors.blueGrey
+                // Colors.blueAccent.shade700,
+                // Color(0xff31A3C6),
 
                 // Colors.deepOrange,
               ])),
@@ -366,20 +365,24 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                   ],
                 ),
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(
-                  children: [
-                    Container(
-                      height: 60,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(color: Colors.black, width: 1),
-                        borderRadius: BorderRadius.circular(10),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        height: 95,
+                        width: 150,
+                        decoration: BoxDecoration(
+                          color: Color(0xff404040),
+                          border: Border.all(color: Colors.white, width: 1),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      Column(
                         children: [
                           Text(
                             'Man Family Wines, Pinoitage\nBosstok 2024',
@@ -393,12 +396,94 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                             'South Africa',
                             style: TextStyle(color: Colors.pink, fontSize: 10),
                           ),
+                          Container(
+                            width: 80,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Color(0xff404040),
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Colors.white,width: 0.7),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Buy Now',style: TextStyle(
+                                color: Colors.pink,
+                                fontSize: 13,
+
+                              ),
+                              ),
+                            ),
+
+                          )
                         ],
                       ),
-                    ),
-                  ],
-                ),
-              ),
+
+                    ],
+                  ),
+                  // Column(
+                  //   children: [
+                  //     Text(
+                  //       'Man Family Wines, Pinoitage\nBosstok 2024',
+                  //       style: TextStyle(color: Colors.white, fontSize: 10),
+                  //     ),
+                  //     Text(
+                  //       'Red Wines,',
+                  //       style: TextStyle(color: Colors.white, fontSize: 10),
+                  //     ),
+                  //     Text(
+                  //       'South Africa',
+                  //       style: TextStyle(color: Colors.pink, fontSize: 10),
+                  //     ),
+                  //   ],
+                  // ),
+
+                  // Container(
+                  //   width: 80,
+                  //   height: 40,
+                  //   decoration: BoxDecoration(
+                  //     color: Color(0xff404040),
+                  //     borderRadius: BorderRadius.circular(10),
+                  //     border: Border.all(color: Colors.white,width: 0.7),
+                  //   ),
+                  //   child: Center(
+                  //     child: Text(
+                  //       'Buy Now',style: TextStyle(
+                  //       color: Colors.pink,
+                  //       fontSize: 13,
+                  //
+                  //     ),
+                  //     ),
+                  //   ),
+                  //
+                  // )
+                ],
+              )
+              /*take 6 trail 9*/
+              // Container(
+              //   height: 60,
+              //   width: 120,
+              //   decoration: BoxDecoration(
+              //     color: Colors.white,
+              //     border: Border.all(color: Colors.black, width: 1),
+              //     borderRadius: BorderRadius.circular(10),
+              //   ),
+              //   child: Column(
+              //     children: [
+              //       Text(
+              //         'Man Family Wines, Pinoitage\nBosstok 2024',
+              //         style: TextStyle(color: Colors.white, fontSize: 10),
+              //       ),
+              //       Text(
+              //         'Red Wines,',
+              //         style: TextStyle(color: Colors.white, fontSize: 10),
+              //       ),
+              //       Text(
+              //         'South Africa',
+              //         style: TextStyle(color: Colors.pink, fontSize: 10),
+              //       ),
+              //     ],
+              //   ),
+              // ),
               /*take 5 / trail 7 */
               // Row(
               //   // mainAxisAlignment: MainAxisAlignment.,
