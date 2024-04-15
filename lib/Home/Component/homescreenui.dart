@@ -374,7 +374,7 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                     children: [
                       Container(
                         height: 95,
-                        width: 150,
+                        width: 200,
                         decoration: BoxDecoration(
                           color: Color(0xff404040),
                           border: Border.all(color: Colors.white, width: 1),
@@ -385,39 +385,71 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                       Column(
                         children: [
                           Text(
-                            'Man Family Wines, Pinoitage\nBosstok 2024',
-                            style: TextStyle(color: Colors.white, fontSize: 10),
-                          ),
-                          Text(
-                            'Red Wines,',
+                            'Man Family Wines, Pinoitage\nBosstok 2024,Red Wines',
                             style: TextStyle(color: Colors.white, fontSize: 10),
                           ),
                           Text(
                             'South Africa',
                             style: TextStyle(color: Colors.pink, fontSize: 10),
                           ),
-                          Container(
-                            width: 80,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Color(0xff404040),
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(color: Colors.white,width: 0.7),
+                          Text(
+                            '9000 Rupee',
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          ),
+                        Container(
+                        width: 90,
+                        height: 35,
+                        decoration: BoxDecoration(
+                          color: Color(0xff404040),
+                          borderRadius: BorderRadius.circular(10),
+                          border:
+                          Border.all(color: Colors.white, width: 0.7),
+                        ),
+                          child: Center(
+                             child: Text(
+                            'Buy Now',
+                            style: TextStyle(
+                              color: Colors.pink,
+                              fontSize: 13,
                             ),
-                            child: Center(
-                              child: Text(
-                                'Buy Now',style: TextStyle(
-                                color: Colors.pink,
-                                fontSize: 13,
-
-                              ),
-                              ),
-                            ),
-
-                          )
+                          ),
+                        ),
+                      ),
+                      // Column(
+                      //   children: [
+                      //     Text(
+                      //       'Man Family Wines, Pinoitage\nBosstok 2024,Red Wines',
+                      //       style: TextStyle(color: Colors.white, fontSize: 10),
+                      //     ),
+                      //     Text(
+                      //       'South Africa',
+                      //       style: TextStyle(color: Colors.pink, fontSize: 10),
+                      //     ),
+                      //     Text(
+                      //       '9000 Rupee',
+                      //       style: TextStyle(color: Colors.white, fontSize: 10),
+                      //     ),
+                          // Container(
+                          //   width: 90,
+                          //   height: 35,
+                          //   decoration: BoxDecoration(
+                          //     color: Color(0xff404040),
+                          //     borderRadius: BorderRadius.circular(10),
+                          //     border:
+                          //         Border.all(color: Colors.white, width: 0.7),
+                          //   ),
+                          //   child: Center(
+                          //     child: Text(
+                          //       'Buy Now',
+                          //       style: TextStyle(
+                          //         color: Colors.pink,
+                          //         fontSize: 13,
+                          //       ),
+                          //     ),
+                          //   ),
+                          // )
                         ],
                       ),
-
                     ],
                   ),
                   // Column(
