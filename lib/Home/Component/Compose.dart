@@ -21,24 +21,27 @@ Widget categories_Box()
         ),
       ),
       Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Container(
-            // margin: EdgeInsets.all(10),
-            height: 60,
-            width: 110,
-            decoration: BoxDecoration(
-              color: Color(0xff404040),
-              border: Border.all(color: Colors.white54, width: 0.7),
-              borderRadius: BorderRadius.circular(16),
-            ),
-            child: Center(
-              child: Text(
-                'Whiskey',
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 15,
-                  letterSpacing: 1,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              // margin: EdgeInsets.all(10),
+              height: 60,
+              width: 110,
+              decoration: BoxDecoration(
+                color: Color(0xff404040),
+                border: Border.all(color: Colors.white54, width: 0.7),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Center(
+                child: Text(
+                  'Whiskey',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    letterSpacing: 1,
+                  ),
                 ),
               ),
             ),
@@ -86,22 +89,25 @@ Widget categories_Box()
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Container(
-            // margin: EdgeInsets.all(10),
-            height: 60,
-            width: 110,
-            decoration: BoxDecoration(
-              color: Color(0xff404040),
-              border: Border.all(color: Colors.white54, width: 0.7),
-              borderRadius: BorderRadius.circular(16),
-            ),
-            child: Center(
-              child: Text(
-                'Brandy',
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 15,
-                  letterSpacing: 1,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              // margin: EdgeInsets.all(10),
+              height: 60,
+              width: 110,
+              decoration: BoxDecoration(
+                color: Color(0xff404040),
+                border: Border.all(color: Colors.white54, width: 0.7),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Center(
+                child: Text(
+                  'Brandy',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    letterSpacing: 1,
+                  ),
                 ),
               ),
             ),
