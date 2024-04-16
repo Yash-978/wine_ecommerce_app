@@ -124,6 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
       
  */
 import 'package:flutter/material.dart';
+import 'package:wine_ecommerce_app/Home/HomeScreen_all_files/Home_screen_ui.dart';
 
 import 'Home/Component/homescreenui.dart';
 void main()
@@ -137,7 +138,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreenUi(),
+      home: Home_Screen(),
     );
   }
 }
