@@ -66,6 +66,16 @@ flutter:
   assets:
     - Assets/Images/pexels-brett-jordan-2308939.jpg
     - Assets/Images/pexels-kenneth-2912108.jpg
+    - Assets/Images/pexels-brett-jordan-2897305.jpg
+    - Assets/Images/pexels-brett-jordan-18847863.jpg
+    - Assets/Images/pexels-garrett-morrow-696618.jpg
+    - Assets/Images/pexels-isabella-mendes-340996.jpg
+    - Assets/Images/pexels-maria-geller-2127005.jpg
+    - Assets/Images/pexels-pixabay-162691.jpg
+    - Assets/Images/pexels-pixabay-207116.jpg
+    - Assets/Images/pexels-tanya-gorelova-3934056.jpg
+    - Assets/Images/pexels-tanya-gorelova-3934057.jpg
+    - Assets/Images/Profile_images/pexels-mohamed-abdelghaffar-771742.jpg
 
 
     # An image asset can refer to one or more resolution-specific "variants", see

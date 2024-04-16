@@ -1,3 +1,4 @@
+// import 'dart:collection';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -26,23 +27,25 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
             /*ye container screen ke complete background ke liye he */
             width: double.infinity,
             decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    /*Light gray or charcoal gray, Turquoise, Golden yellow, Umber, Blue, Pastel pink, White, Black, and Orange.
+              gradient: LinearGradient(
+                /*Light gray or charcoal gray, Turquoise, Golden yellow, Umber, Blue, Pastel pink, White, Black, and Orange.
         */
-                    begin: Alignment.topCenter,
-                    // tileMode: TileMode.mirror,
+                begin: Alignment.topCenter,
+                // tileMode: TileMode.mirror,
 
-                    transform: GradientRotation(
-                      800000000, // double.infinity,
-                    ),
-                    end: Alignment.bottomCenter,
-                    colors: [
+                transform: GradientRotation(
+                  800000000, // double.infinity,
+                ),
+                end: Alignment.bottomCenter,
+                colors: [
                   // Color(0xff960F0F), // Color(0xffF8CADD),
                   // Color(0xff6E260E),
                   // Colors.blueGrey,
                   Color(0xff800020),
                   Colors.deepPurple,
-                ])),
+                ],
+              ),
+            ),
             height: double.infinity,
             child: SingleChildScrollView(
               child: Column(
@@ -74,7 +77,8 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
       ),
     );
   }
-
+}
+/*
   Column wine_details() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -336,3 +340,6 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
   }
 }
 //ye puri trial file he gmail ki
+
+
+ */
