@@ -185,7 +185,7 @@ Column wine_details() {
             width: 160,
             decoration: BoxDecoration(
               image: DecorationImage(
-                fit: BoxFit.fitHeight,
+                fit: BoxFit.cover,
                 image: AssetImage(
                     'Assets/Images/pexels-tanya-gorelova-3934057.jpg'),
               ),
