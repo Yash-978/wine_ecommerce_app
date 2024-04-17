@@ -1,4 +1,4 @@
-List Wine_List = [
+List wineList = [
 {
 'beverages_name' : 'bjkhjbbn',
 'beverages_price' : '\$20000',
@@ -14,10 +14,19 @@ List Wine_List = [
 'beverages_price' : '\$20000',
 'country' : 'Russia',
 'beverages_categories' :'wine',
-'ratings':'5'
+'ratings':'5',
 'img':'Assets/Images/pexels-kenneth-2912108.jpg',
 
 
 },
 
+
+];
+
+List wineCategories = [
+  {
+    'Brandy',
+    'Wine',
+    'Beer',
+  }
 ];

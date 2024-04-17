@@ -4,8 +4,8 @@ Widget categories_Box() {
   return Column(
     mainAxisSize: MainAxisSize.min,
     children: [
-      Padding(
-        padding: const EdgeInsets.all(10),
+      const Padding(
+        padding: EdgeInsets.all(10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -31,10 +31,10 @@ Widget categories_Box() {
               width: 110,
               decoration: BoxDecoration(
                 color: Color(0xff404040),
-                border: Border.all(color: Colors.white54, width: 0.7),
+                // border: Border.all(color: Colors.white54, width: 0.7),
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Whiskey',
                   style: TextStyle(
@@ -46,40 +46,46 @@ Widget categories_Box() {
               ),
             ),
           ),
-          Container(
-            height: 60,
-            width: 110,
-            decoration: BoxDecoration(
-              color: Color(0xff404040),
-              border: Border.all(color: Colors.white54, width: 0.7),
-              borderRadius: BorderRadius.circular(16),
-            ),
-            child: Center(
-              child: Text(
-                'Vodka',
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 15,
-                  letterSpacing: 1,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 60,
+              width: 110,
+              decoration: BoxDecoration(
+                color: Color(0xff404040),
+                // border: Border.all(color: Colors.white54, width: 0.7),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: const Center(
+                child: Text(
+                  'Vodka',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    letterSpacing: 1,
+                  ),
                 ),
               ),
             ),
           ),
-          Container(
-            height: 60,
-            width: 110,
-            decoration: BoxDecoration(
-              color: Color(0xff404040),
-              border: Border.all(color: Colors.white54, width: 0.7),
-              borderRadius: BorderRadius.circular(16),
-            ),
-            child: Center(
-              child: Text(
-                'Rum',
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 15,
-                  letterSpacing: 1,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 60,
+              width: 110,
+              decoration: BoxDecoration(
+                color: Color(0xff404040),
+                // border: Border.all(color: Colors.white54, width: 0.7),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: const Center(
+                child: Text(
+                  'Rum',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    letterSpacing: 1,
+                  ),
                 ),
               ),
             ),
@@ -87,7 +93,7 @@ Widget categories_Box() {
         ],
       ),
       Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -97,10 +103,10 @@ Widget categories_Box() {
               width: 110,
               decoration: BoxDecoration(
                 color: Color(0xff404040),
-                border: Border.all(color: Colors.white54, width: 0.7),
+                // border: Border.all(color: Colors.white54, width: 0.7),
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Brandy',
                   style: TextStyle(
@@ -112,48 +118,54 @@ Widget categories_Box() {
               ),
             ),
           ),
-          Container(
-            height: 60,
-            width: 110,
-            decoration: BoxDecoration(
-              color: Color(0xff404040),
-              border: Border.all(color: Colors.white54, width: 0.7),
-              borderRadius: BorderRadius.circular(16),
-            ),
-            child: Center(
-              child: Text(
-                'Wine',
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 15,
-                  letterSpacing: 1,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 60,
+              width: 110,
+              decoration: BoxDecoration(
+                color: Color(0xff404040),
+                // border: Border.all(color: Colors.white54, width: 0.7),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: const Center(
+                child: Text(
+                  'Wine',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    letterSpacing: 1,
+                  ),
                 ),
               ),
             ),
           ),
-          Container(
-            height: 60,
-            width: 110,
-            decoration: BoxDecoration(
-              color: Color(0xff404040),
-              border: Border.all(color: Colors.white54, width: 0.7),
-              borderRadius: BorderRadius.circular(16),
-            ),
-            child: Center(
-              child: Text(
-                'Beer',
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 15,
-                  letterSpacing: 1,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 60,
+              width: 110,
+              decoration: BoxDecoration(
+                color: Color(0xff404040),
+                // border: Border.all(color: Colors.white54, width: 0.7),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: const Center(
+                child: Text(
+                  'Beer',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    letterSpacing: 1,
+                  ),
                 ),
               ),
             ),
           ),
         ],
       ),
-      Padding(
-        padding: const EdgeInsets.all(10),
+      const Padding(
+        padding: EdgeInsets.all(10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -184,7 +196,7 @@ Column wine_details() {
             height: 130,
             width: 160,
             decoration: BoxDecoration(
-              image: DecorationImage(
+              image: const DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
                     'Assets/Images/pexels-tanya-gorelova-3934057.jpg'),
@@ -193,13 +205,13 @@ Column wine_details() {
               //   fit: BoxFit.fill,
               //   image: AssetImage('Assets/Images/pexels-tanya-gorelova-3934057.jpg'),
               // color: Color(0xff404040),
-              border: Border.all(color: Colors.white, width: 1),
+              // border: Border.all(color: Colors.white, width: 1),
               borderRadius: BorderRadius.circular(10),
             ),
           ),
           Column(
             children: [
-              Text.rich(
+              const Text.rich(
                 TextSpan(
                   children: [
                     TextSpan(
@@ -229,7 +241,6 @@ Column wine_details() {
                   ],
                 ),
               ),
-
               Row(
                 children: [
                   Container(
@@ -239,10 +250,13 @@ Column wine_details() {
                     decoration: BoxDecoration(
                       color: Colors.pink.shade500,
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: Colors.white, width: 0.7),
+                      // border: Border.all(color: Colors.white, width: 0.7),
                     ),
-                    child: Center(
-                      child: Icon(Icons.remove,color: Colors.white,),
+                    child: const Center(
+                      child: Icon(
+                        Icons.remove,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   Container(
@@ -252,9 +266,9 @@ Column wine_details() {
                     decoration: BoxDecoration(
                       color: Color(0xff404040),
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.white, width: 0.7),
+                      // border: Border.all(color: Colors.white, width: 0.7),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Buy Now',
                         style: TextStyle(
@@ -272,15 +286,17 @@ Column wine_details() {
                     decoration: BoxDecoration(
                       color: Colors.pink.shade500,
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: Colors.white, width: 0.7),
+                      // border: Border.all(color: Colors.white, width: 0.7),
                     ),
-                    child: Center(
-                      child: Icon(Icons.add,color: Colors.white,),
+                    child: const Center(
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],
               ),
-
             ],
           ),
         ],
@@ -289,8 +305,6 @@ Column wine_details() {
     ],
   );
 }
-
-
 
 Container advertisement_Special_offers() {
   return Container(
@@ -301,13 +315,14 @@ Container advertisement_Special_offers() {
     // alignment: Alignment.center,
     // color: Colors.white,
     decoration: BoxDecoration(
-        border: Border.all(color: Colors.white54, width: 0.5),
+        // border: Border.all(color: Colors.white54, width: 0.5),
         borderRadius: BorderRadius.circular(15),
         color: Color(0xff404040)),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.all(15),
@@ -335,7 +350,9 @@ Container advertisement_Special_offers() {
                 ),
               ),
             ),
+
             Container(
+              margin: EdgeInsets.symmetric(horizontal: 20),
               height: 40,
               width: 110,
               decoration: BoxDecoration(
@@ -391,11 +408,11 @@ Container Search_bar_row() {
     /*ye container search wala he jiske ander row ke ander sari chije dalne
                 se 2 icons or 1 text use kar paa rhe he*/
     height: 50,
-    width: 370,
+    width: 390,
     // alignment: Alignment.center,
     // color: Colors.white,
     decoration: BoxDecoration(
-        border: Border.all(color: Colors.white54, width: 0.5),
+        // border: Border.all(color: Colors.white54, width: 0.5),
         borderRadius: BorderRadius.circular(15),
         color: Color(0xff404040)),
     child: Row(
@@ -424,56 +441,57 @@ Container Search_bar_row() {
   );
 }
 
-Row Welcome_user_row() {
-  return Row(
-    /*iss row me welcome user wala profile baar he*/
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-      Container(
-        height: 35,
-        width: 40,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          image: DecorationImage(
-            fit: BoxFit.fill,
-            image: AssetImage(
-                'Assets/Images/Profile_images/pexels-mohamed-abdelghaffar-771742.jpg'),
+Widget Welcome_user_row() {
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: Row(
+      /*iss row me welcome user wala profile baar he*/
+      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Container(
+          height: 35,
+          width: 40,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            image: DecorationImage(
+              fit: BoxFit.fill,
+              image: AssetImage(
+                  'Assets/Images/Profile_images/pexels-mohamed-abdelghaffar-771742.jpg'),
+            ),
+            // image: Image.asset(name),
+            border: Border.all(color: Colors.black),
           ),
-          // image: Image.asset(name),
-          border: Border.all(color: Colors.black),
         ),
-      ),
-      SizedBox(
-        width: 250,
-        height: 50,
-        child: Text(
+        Text(
           'Welcome User 😁\nHey_Yash',
           style: TextStyle(
             color: Colors.white,
           ),
         ),
-      ),
-      Container(
-        height: 40,
-        width: 40,
-        decoration: BoxDecoration(
-            color: Color(0xffE83456), borderRadius: BorderRadius.circular(10)),
-        child: Icon(
-          Icons.notifications,
-          color: Colors.white,
+        Spacer(),
+        Container(
+          height: 40,
+          width: 40,
+          decoration: BoxDecoration(
+              color: Color(0xffE83456), borderRadius: BorderRadius.circular(10)),
+          child: Icon(
+            Icons.notifications,
+            color: Colors.white,
+          ),
         ),
-      ),
-      Container(
-        height: 40,
-        width: 40,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8), color: Color(0xffE83456)),
-        child: Icon(
-          Icons.favorite,
-          color: Colors.white,
+        SizedBox(width: 10,),
+        Container(
+          height: 40,
+          width: 40,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8), color: Color(0xffE83456)),
+          child: Icon(
+            Icons.favorite,
+            color: Colors.white,
+          ),
         ),
-      ),
-    ],
+      ],
+    ),
   );
 }
 
