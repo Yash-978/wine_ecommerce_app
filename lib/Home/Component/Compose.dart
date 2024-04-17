@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-Widget categories_Box()
-{
+
+Widget categories_Box() {
   return Column(
     mainAxisSize: MainAxisSize.min,
     children: [
@@ -185,7 +185,9 @@ Column wine_details() {
             width: 160,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('C:/Android Studio projects/wine_ecommerce_app/Assets/Images/pexels-tanya-gorelova-3934056.jpg'),
+                fit: BoxFit.fitHeight,
+                image: AssetImage(
+                    'Assets/Images/pexels-tanya-gorelova-3934057.jpg'),
               ),
               // image: DecorationImage(
               //   fit: BoxFit.fill,
@@ -197,51 +199,88 @@ Column wine_details() {
           ),
           Column(
             children: [
-              Text.rich(TextSpan(children: [
+              Text.rich(
                 TextSpan(
-                  text: 'Man Family Wines, Pinoitage\nBosstok 2024 \n',
-                  style: TextStyle(color: Colors.white, fontSize: 12),
+                  children: [
+                    TextSpan(
+                      text: 'Man Family Wines, Pinoitage\nBosstok 2024 \n',
+                      style: TextStyle(color: Colors.white, fontSize: 14),
+                    ),
+                    TextSpan(
+                      text: 'Red Wines,',
+                      style: TextStyle(color: Colors.white, fontSize: 14),
+                    ),
+                    TextSpan(
+                      text: 'South Africa\n',
+                      style: TextStyle(color: Colors.pink, fontSize: 14),
+                    ),
+                    TextSpan(
+                      text: "💵1995,",
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
+                    TextSpan(
+                      text: '   ⭐',
+                      style: TextStyle(color: Colors.pink, fontSize: 15),
+                    ),
+                    TextSpan(
+                      text: ' 5',
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
+                  ],
                 ),
-                TextSpan(
-                  text: 'Red Wines,',
-                  style: TextStyle(color: Colors.white, fontSize: 12),
-                ),
-                TextSpan(
-                  text: 'South Africa\n',
-                  style: TextStyle(color: Colors.pink, fontSize: 12),
-                ),
-                TextSpan(
-                  text: '💵1995,',
-                  style: TextStyle(color: Colors.white, fontSize: 12),
-                ),
-                TextSpan(
-                  text: '   ⭐',
-                  style: TextStyle(color: Colors.pink, fontSize: 12),
-                ),
-                TextSpan(
-                  text: '5',
-                  style: TextStyle(color: Colors.white, fontSize: 14),
-                ),
-              ])),
-              Container(
-                width: 165,
-                height: 40,
-                decoration: BoxDecoration(
-                  color: Color(0xff404040),
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.white, width: 0.7),
-                ),
-                child: Center(
-                  child: Text(
-                    'Buy Now',
-                    style: TextStyle(
-                      color: Colors.pink,
-                      fontSize: 20,
-                      letterSpacing: 2,
+              ),
+
+              Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(4),
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.pink.shade500,
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: Colors.white, width: 0.7),
+                    ),
+                    child: Center(
+                      child: Icon(Icons.remove,color: Colors.white,),
                     ),
                   ),
-                ),
-              )
+                  Container(
+                    width: 130,
+                    height: 40,
+                    margin: EdgeInsets.all(4),
+                    decoration: BoxDecoration(
+                      color: Color(0xff404040),
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.white, width: 0.7),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Buy Now',
+                        style: TextStyle(
+                          color: Colors.pink,
+                          fontSize: 20,
+                          letterSpacing: 2,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 40,
+                    height: 40,
+                    margin: EdgeInsets.all(4),
+                    decoration: BoxDecoration(
+                      color: Colors.pink.shade500,
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: Colors.white, width: 0.7),
+                    ),
+                    child: Center(
+                      child: Icon(Icons.add,color: Colors.white,),
+                    ),
+                  ),
+                ],
+              ),
+
             ],
           ),
         ],
@@ -283,7 +322,7 @@ Container advertisement_Special_offers() {
                     ),
                     TextSpan(
                       text:
-                      "\nLet's have a wintage and old taste and \n scotch Whiskey",
+                          "\nLet's have a wintage and old taste and \n scotch Whiskey",
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 10,
@@ -395,7 +434,8 @@ Row Welcome_user_row() {
           shape: BoxShape.circle,
           image: DecorationImage(
             fit: BoxFit.fill,
-            image: AssetImage('Assets/Images/Profile_images/pexels-mohamed-abdelghaffar-771742.jpg'),
+            image: AssetImage(
+                'Assets/Images/Profile_images/pexels-mohamed-abdelghaffar-771742.jpg'),
           ),
           // image: Image.asset(name),
           border: Border.all(color: Colors.black),
@@ -415,8 +455,7 @@ Row Welcome_user_row() {
         height: 40,
         width: 40,
         decoration: BoxDecoration(
-            color: Color(0xffE83456),
-            borderRadius: BorderRadius.circular(10)),
+            color: Color(0xffE83456), borderRadius: BorderRadius.circular(10)),
         child: Icon(
           Icons.notifications,
           color: Colors.white,
