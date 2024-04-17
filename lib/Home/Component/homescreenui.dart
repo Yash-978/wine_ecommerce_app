@@ -48,6 +48,9 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
             ),
             height: double.infinity,
             child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(
+
+              ),
               child: Column(
                 /*ye column se start he ui */
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
