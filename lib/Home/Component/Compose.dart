@@ -185,124 +185,117 @@ Widget categories_Box() {
   );
 }
 
-Column wine_details() {
-  return Column(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    // crossAxisAlignment: CrossAxisAlignment.start,
+Widget wine_details() {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      Container(
+        height: 130,
+        width: 160,
+        decoration: BoxDecoration(
+          image: const DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage(
+                'Assets/Images/pexels-tanya-gorelova-3934057.jpg'),
+          ),
+          // image: DecorationImage(
+          //   fit: BoxFit.fill,
+          //   image: AssetImage('Assets/Images/pexels-tanya-gorelova-3934057.jpg'),
+          // color: Color(0xff404040),
+          // border: Border.all(color: Colors.white, width: 1),
+          borderRadius: BorderRadius.circular(10),
+        ),
+      ),
+      Column(
         children: [
-          Container(
-            height: 130,
-            width: 160,
-            decoration: BoxDecoration(
-              image: const DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                    'Assets/Images/pexels-tanya-gorelova-3934057.jpg'),
-              ),
-              // image: DecorationImage(
-              //   fit: BoxFit.fill,
-              //   image: AssetImage('Assets/Images/pexels-tanya-gorelova-3934057.jpg'),
-              // color: Color(0xff404040),
-              // border: Border.all(color: Colors.white, width: 1),
-              borderRadius: BorderRadius.circular(10),
+          const Text.rich(
+            TextSpan(
+              children: [
+                TextSpan(
+                  text: 'Man Family Wines, Pinoitage\nBosstok 2024 \n',
+                  style: TextStyle(color: Colors.white, fontSize: 14),
+                ),
+                TextSpan(
+                  text: 'Red Wines,',
+                  style: TextStyle(color: Colors.white, fontSize: 14),
+                ),
+                TextSpan(
+                  text: 'South Africa\n',
+                  style: TextStyle(color: Colors.pink, fontSize: 14),
+                ),
+                TextSpan(
+                  text: "💵1995,",
+                  style: TextStyle(color: Colors.white, fontSize: 15),
+                ),
+                TextSpan(
+                  text: '   ⭐',
+                  style: TextStyle(color: Colors.pink, fontSize: 15),
+                ),
+                TextSpan(
+                  text: ' 5',
+                  style: TextStyle(color: Colors.white, fontSize: 15),
+                ),
+              ],
             ),
           ),
-          Column(
+          Row(
             children: [
-              const Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Man Family Wines, Pinoitage\nBosstok 2024 \n',
-                      style: TextStyle(color: Colors.white, fontSize: 14),
-                    ),
-                    TextSpan(
-                      text: 'Red Wines,',
-                      style: TextStyle(color: Colors.white, fontSize: 14),
-                    ),
-                    TextSpan(
-                      text: 'South Africa\n',
-                      style: TextStyle(color: Colors.pink, fontSize: 14),
-                    ),
-                    TextSpan(
-                      text: "💵1995,",
-                      style: TextStyle(color: Colors.white, fontSize: 15),
-                    ),
-                    TextSpan(
-                      text: '   ⭐',
-                      style: TextStyle(color: Colors.pink, fontSize: 15),
-                    ),
-                    TextSpan(
-                      text: ' 5',
-                      style: TextStyle(color: Colors.white, fontSize: 15),
-                    ),
-                  ],
+              Container(
+                margin: EdgeInsets.all(4),
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: Colors.pink.shade500,
+                  borderRadius: BorderRadius.circular(20),
+                  // border: Border.all(color: Colors.white, width: 0.7),
+                ),
+                child: const Center(
+                  child: Icon(
+                    Icons.remove,
+                    color: Colors.white,
+                  ),
                 ),
               ),
-              Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.all(4),
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: Colors.pink.shade500,
-                      borderRadius: BorderRadius.circular(20),
-                      // border: Border.all(color: Colors.white, width: 0.7),
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.remove,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 130,
-                    height: 40,
-                    margin: EdgeInsets.all(4),
-                    decoration: BoxDecoration(
-                      color: Color(0xff404040),
-                      borderRadius: BorderRadius.circular(10),
-                      // border: Border.all(color: Colors.white, width: 0.7),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Buy Now',
-                        style: TextStyle(
-                          color: Colors.pink,
-                          fontSize: 20,
-                          letterSpacing: 2,
-                        ),
-                      ),
+              Container(
+                width: 130,
+                height: 40,
+                margin: EdgeInsets.all(4),
+                decoration: BoxDecoration(
+                  color: Color(0xff404040),
+                  borderRadius: BorderRadius.circular(10),
+                  // border: Border.all(color: Colors.white, width: 0.7),
+                ),
+                child: const Center(
+                  child: Text(
+                    'Buy Now',
+                    style: TextStyle(
+                      color: Colors.pink,
+                      fontSize: 20,
+                      letterSpacing: 2,
                     ),
                   ),
-                  Container(
-                    width: 40,
-                    height: 40,
-                    margin: EdgeInsets.all(4),
-                    decoration: BoxDecoration(
-                      color: Colors.pink.shade500,
-                      borderRadius: BorderRadius.circular(20),
-                      // border: Border.all(color: Colors.white, width: 0.7),
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.add,
-                        color: Colors.white,
-                      ),
-                    ),
+                ),
+              ),
+              Container(
+                width: 40,
+                height: 40,
+                margin: EdgeInsets.all(4),
+                decoration: BoxDecoration(
+                  color: Colors.pink.shade500,
+                  borderRadius: BorderRadius.circular(20),
+                  // border: Border.all(color: Colors.white, width: 0.7),
+                ),
+                child: const Center(
+                  child: Icon(
+                    Icons.add,
+                    color: Colors.white,
                   ),
-                ],
+                ),
               ),
             ],
           ),
         ],
       ),
-      // Column(
     ],
   );
 }

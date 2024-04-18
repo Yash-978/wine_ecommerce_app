@@ -43,18 +43,11 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                   Special_offers(),
                   advertisement_Special_offers(),
                   categories_Box(),
-                  Padding(
+
+                  ...List.generate(5, (index) => Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: wine_details(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: wine_details(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: wine_details(),
-                  ),
+                  ),)
                 ],
               ),
             ),
