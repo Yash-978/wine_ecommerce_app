@@ -64,6 +64,8 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
     );
   }
 }
+
+
 /*
   Column wine_details() {
     return Column(
@@ -326,6 +328,4 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
   }
 }
 //ye puri trial file he gmail ki
-
-
  */
