@@ -1,4 +1,4 @@
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // import '../HomeScreen_all_files/all_List.dart';
@@ -187,7 +187,8 @@ Widget categories_Box() {
   );
 }
 
-Widget wine_details(int index,String img,String name,int price,String country,String categories,String ratings) {
+Widget wine_details(int index, String img, String name, int price,
+    String country, String categories, String ratings) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Column(
@@ -201,7 +202,7 @@ Widget wine_details(int index,String img,String name,int price,String country,St
               height: 130,
               width: 160,
               decoration: BoxDecoration(
-                image:  DecorationImage(
+                image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(img),
                 ),
@@ -215,36 +216,44 @@ Widget wine_details(int index,String img,String name,int price,String country,St
             ),
             Column(
               children: [
-                 Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text: '${name}',
-                        style: TextStyle(color: Colors.white, fontSize: 14),
-                      ),
-                      TextSpan(
-                        text: '${categories},',
-                        style: TextStyle(color: Colors.white, fontSize: 14),
-                      ),
-                      TextSpan(
-                        text: '${country}',
-                        style: TextStyle(color: Colors.pink, fontSize: 14),
-                      ),
-                      TextSpan(
-                        text:'${price}',
-                        style: TextStyle(color: Colors.white, fontSize: 15),
-                      ),
-                      TextSpan(
-                        text: '   ⭐',
-                        style: TextStyle(color: Colors.pink, fontSize: 15),
-                      ),
-                      TextSpan(
-                        text: '${ratings}',
-                        style: TextStyle(color: Colors.white, fontSize: 15),
-                      ),
-                    ],
+                Container(
+                  width: 200,
+                  child: Text(
+                    '${name}',overflow: TextOverflow.clip,
+                    style: TextStyle(color: Colors.white, fontSize: 14),
                   ),
                 ),
+
+                Row(
+                  children: [
+                    Text(
+                      '${categories},',
+                      style: TextStyle(color: Colors.white, fontSize: 14),
+                    ),
+                    Text(
+                      '${country}',
+                      style: TextStyle(color: Colors.pink, fontSize: 14),
+                    ),
+
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text(
+                      '${price}',
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
+                    Text(
+                      '   ⭐',
+                      style: TextStyle(color: Colors.pink, fontSize: 15),
+                    ),
+                    Text(
+                      '${ratings}',
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
+                  ],
+                ),
+
                 Row(
                   children: [
                     Container(
@@ -355,7 +364,6 @@ Container advertisement_Special_offers() {
                 ),
               ),
             ),
-
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
               height: 40,
@@ -478,13 +486,16 @@ Widget Welcome_user_row() {
           height: 40,
           width: 40,
           decoration: BoxDecoration(
-              color: Color(0xffE83456), borderRadius: BorderRadius.circular(10)),
+              color: Color(0xffE83456),
+              borderRadius: BorderRadius.circular(10)),
           child: Icon(
             Icons.notifications,
             color: Colors.white,
           ),
         ),
-        SizedBox(width: 10,),
+        SizedBox(
+          width: 10,
+        ),
         Container(
           height: 40,
           width: 40,
@@ -501,5 +512,3 @@ Widget Welcome_user_row() {
 }
 
 //ye puri trial file he gmail ki
-
-

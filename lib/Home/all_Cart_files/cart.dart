@@ -9,10 +9,12 @@ class Cartui extends StatefulWidget {
 class _CartuiState extends State<Cartui> {
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Container(
-        height: double.infinity,
-        width: double.infinity,
+        height: height,
+        width: width,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -23,7 +25,9 @@ class _CartuiState extends State<Cartui> {
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(color: Colors.grey,)
               ),
-            )
+            ),
+
+
 
           ],
         ),

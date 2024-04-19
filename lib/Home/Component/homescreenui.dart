@@ -32,7 +32,6 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                 colors: [
                   Color(0xff230b21),
                   Color(0xff0b1a1a),
-
                 ],
                 radius: 1,
                 center: const Alignment(0.8, 0),
@@ -42,9 +41,7 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
             ),
             height: double.infinity,
             child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(
-
-              ),
+              physics: BouncingScrollPhysics(),
               child: Column(
                 /*ye column se start he ui */
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -54,7 +51,23 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                   Special_offers(),
                   advertisement_Special_offers(),
                   categories_Box(),
-                  ...List.generate(wineList.length, (index) =>wine_details(index,wineList[index]['img'],wineList[index]['name'],wineList[index]['price'],wineList[index]['country'],wineList[index]['categories'],wineList[index]['ratings']), )
+                  ...List.generate(
+                    wineList.length,
+                    (index) => GestureDetector(
+                      onTap: () {
+                        setState(() {
+
+                        });
+                      },
+                        child: wine_details(
+                            index,
+                            wineList[index]['img'],
+                            wineList[index]['name'],
+                            wineList[index]['price'],
+                            wineList[index]['country'],
+                            wineList[index]['categories'],
+                            wineList[index]['ratings'])),
+                  )
                   // Padding(
                   //   padding: const EdgeInsets.all(8.0),
                   //   child: wine_details(),
@@ -76,7 +89,6 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
     );
   }
 }
-
 
 /*
   Column wine_details() {
