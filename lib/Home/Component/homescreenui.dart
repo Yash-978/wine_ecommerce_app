@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:wine_ecommerce_app/Home/HomeScreen_all_files/all_List.dart';
 
 // import '../Component/Categories.dart';
 import 'Compose.dart';
@@ -27,7 +28,17 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
             /*ye container screen ke complete background ke liye he */
             width: double.infinity,
             decoration: const BoxDecoration(
-              color: Color(0xff141519),
+              gradient: RadialGradient(
+                colors: [
+                  Color(0xff230b21),
+                  Color(0xff0b1a1a),
+
+                ],
+                radius: 1,
+                center: const Alignment(0.8, 0),
+              ),
+
+              // color: Color(0xff141519),
             ),
             height: double.infinity,
             child: SingleChildScrollView(
@@ -43,11 +54,19 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                   Special_offers(),
                   advertisement_Special_offers(),
                   categories_Box(),
-
-                  ...List.generate(5, (index) => Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: wine_details(),
-                  ),)
+                  ...List.generate(wineList.length, (index) =>wine_details(index,wineList[index]['img'],wineList[index]['name'],wineList[index]['price'],wineList[index]['country']), )
+                  // Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: wine_details(),
+                  // ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: wine_details(),
+                  // ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: wine_details(),
+                  // ),
                 ],
               ),
             ),

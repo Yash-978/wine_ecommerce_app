@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../HomeScreen_all_files/all_List.dart';
+
 Widget categories_Box() {
   return Column(
     mainAxisSize: MainAxisSize.min,
@@ -185,118 +187,127 @@ Widget categories_Box() {
   );
 }
 
-Widget wine_details() {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-      Container(
-        height: 130,
-        width: 160,
-        decoration: BoxDecoration(
-          image: const DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage(
-                'Assets/Images/pexels-tanya-gorelova-3934057.jpg'),
-          ),
-          // image: DecorationImage(
-          //   fit: BoxFit.fill,
-          //   image: AssetImage('Assets/Images/pexels-tanya-gorelova-3934057.jpg'),
-          // color: Color(0xff404040),
-          // border: Border.all(color: Colors.white, width: 1),
-          borderRadius: BorderRadius.circular(10),
-        ),
-      ),
-      Column(
-        children: [
-          const Text.rich(
-            TextSpan(
+Widget wine_details(int index ,String img,String name,int price,String country) {
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      // crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              height: 130,
+              width: 160,
+              decoration: BoxDecoration(
+                image:  DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(img),
+                ),
+                // image: DecorationImage(
+                //   fit: BoxFit.fill,
+                //   image: AssetImage('Assets/Images/pexels-tanya-gorelova-3934057.jpg'),
+                // color: Color(0xff404040),
+                // border: Border.all(color: Colors.white, width: 1),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            Column(
               children: [
-                TextSpan(
-                  text: 'Man Family Wines, Pinoitage\nBosstok 2024 \n',
-                  style: TextStyle(color: Colors.white, fontSize: 14),
+                 Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: name,
+                        style: TextStyle(color: Colors.white, fontSize: 14),
+                      ),
+                      TextSpan(
+                        text: country,
+                        style: TextStyle(color: Colors.white, fontSize: 14),
+                      ),
+                      TextSpan(
+                        text: 'South Africa\n',
+                        style: TextStyle(color: Colors.pink, fontSize: 14),
+                      ),
+                      TextSpan(
+                        text:'${price}',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      ),
+                      TextSpan(
+                        text: '   ⭐',
+                        style: TextStyle(color: Colors.pink, fontSize: 15),
+                      ),
+                      TextSpan(
+                        text: ' 5',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      ),
+                    ],
+                  ),
                 ),
-                TextSpan(
-                  text: 'Red Wines,',
-                  style: TextStyle(color: Colors.white, fontSize: 14),
-                ),
-                TextSpan(
-                  text: 'South Africa\n',
-                  style: TextStyle(color: Colors.pink, fontSize: 14),
-                ),
-                TextSpan(
-                  text: "💵1995,",
-                  style: TextStyle(color: Colors.white, fontSize: 15),
-                ),
-                TextSpan(
-                  text: '   ⭐',
-                  style: TextStyle(color: Colors.pink, fontSize: 15),
-                ),
-                TextSpan(
-                  text: ' 5',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
+                Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(4),
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Colors.pink.shade500,
+                        borderRadius: BorderRadius.circular(20),
+                        // border: Border.all(color: Colors.white, width: 0.7),
+                      ),
+                      child: const Center(
+                        child: Icon(
+                          Icons.remove,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: 130,
+                      height: 40,
+                      margin: EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        color: Color(0xff404040),
+                        borderRadius: BorderRadius.circular(10),
+                        // border: Border.all(color: Colors.white, width: 0.7),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          'Buy Now',
+                          style: TextStyle(
+                            color: Colors.pink,
+                            fontSize: 20,
+                            letterSpacing: 2,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: 40,
+                      height: 40,
+                      margin: EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        color: Colors.pink.shade500,
+                        borderRadius: BorderRadius.circular(20),
+                        // border: Border.all(color: Colors.white, width: 0.7),
+                      ),
+                      child: const Center(
+                        child: Icon(
+                          Icons.add,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
-          ),
-          Row(
-            children: [
-              Container(
-                margin: EdgeInsets.all(4),
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  color: Colors.pink.shade500,
-                  borderRadius: BorderRadius.circular(20),
-                  // border: Border.all(color: Colors.white, width: 0.7),
-                ),
-                child: const Center(
-                  child: Icon(
-                    Icons.remove,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              Container(
-                width: 130,
-                height: 40,
-                margin: EdgeInsets.all(4),
-                decoration: BoxDecoration(
-                  color: Color(0xff404040),
-                  borderRadius: BorderRadius.circular(10),
-                  // border: Border.all(color: Colors.white, width: 0.7),
-                ),
-                child: const Center(
-                  child: Text(
-                    'Buy Now',
-                    style: TextStyle(
-                      color: Colors.pink,
-                      fontSize: 20,
-                      letterSpacing: 2,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                width: 40,
-                height: 40,
-                margin: EdgeInsets.all(4),
-                decoration: BoxDecoration(
-                  color: Colors.pink.shade500,
-                  borderRadius: BorderRadius.circular(20),
-                  // border: Border.all(color: Colors.white, width: 0.7),
-                ),
-                child: const Center(
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    ],
+          ],
+        ),
+        // Column(
+      ],
+    ),
   );
 }
 
