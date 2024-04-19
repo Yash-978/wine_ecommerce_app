@@ -54,7 +54,7 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                   Special_offers(),
                   advertisement_Special_offers(),
                   categories_Box(),
-                  ...List.generate(wineList.length, (index) =>wine_details(index,wineList[index]['img'],wineList[index]['name'],wineList[index]['price'],wineList[index]['country']), )
+                  ...List.generate(wineList.length, (index) =>wine_details(index,wineList[index]['img'],wineList[index]['name'],wineList[index]['price'],wineList[index]['country'],wineList[index]['categories'],wineList[index]['ratings']), )
                   // Padding(
                   //   padding: const EdgeInsets.all(8.0),
                   //   child: wine_details(),

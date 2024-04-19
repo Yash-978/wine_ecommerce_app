@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../HomeScreen_all_files/all_List.dart';
+// import '../HomeScreen_all_files/all_List.dart';
 
 Widget categories_Box() {
   return Column(
@@ -187,7 +187,7 @@ Widget categories_Box() {
   );
 }
 
-Widget wine_details(int index ,String img,String name,int price,String country) {
+Widget wine_details(int index,String img,String name,int price,String country,String categories,String ratings) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Column(
@@ -219,15 +219,15 @@ Widget wine_details(int index ,String img,String name,int price,String country) 
                   TextSpan(
                     children: [
                       TextSpan(
-                        text: name,
+                        text: '${name}',
                         style: TextStyle(color: Colors.white, fontSize: 14),
                       ),
                       TextSpan(
-                        text: country,
+                        text: '${categories},',
                         style: TextStyle(color: Colors.white, fontSize: 14),
                       ),
                       TextSpan(
-                        text: 'South Africa\n',
+                        text: '${country}',
                         style: TextStyle(color: Colors.pink, fontSize: 14),
                       ),
                       TextSpan(
@@ -239,7 +239,7 @@ Widget wine_details(int index ,String img,String name,int price,String country) 
                         style: TextStyle(color: Colors.pink, fontSize: 15),
                       ),
                       TextSpan(
-                        text: ' 5',
+                        text: '${ratings}',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ],
