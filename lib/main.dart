@@ -15,7 +15,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Cartui(),
+      // home: Cartui(),
+      routes: {
+        '/':(context)=>const HomeScreenUi(),
+        '/cartscreen':(context)=>const Cartui(),
+
+      },
     );
   }
 }

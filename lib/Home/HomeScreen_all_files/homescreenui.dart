@@ -123,20 +123,18 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                   categories_Box(),
                   ...List.generate(
                     wineList.length,
-                        (index) => GestureDetector(
-                        onTap: () {
-                          setState(() {
-
-                          });
-                        },
-                        child: wine_details(index,
-                            wineList[index]['img'],
-                            wineList[index]['name'],
-                            wineList[index]['price'],
-                            wineList[index]['country'],
-                            wineList[index]['categories'],
-                            wineList[index]['ratings'])),
-                  )
+                        (index) => InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/cartscreen');
+                          },
+                          child: wine_details(index,
+                              wineList[index]['img'],
+                              wineList[index]['name'],
+                              wineList[index]['price'],
+                              wineList[index]['country'],
+                              wineList[index]['categories'],
+                              wineList[index]['ratings']),
+                        )),
 
                 ],
               ),
