@@ -185,7 +185,7 @@ Widget categories_Box() {
   );
 }
 
-Widget wine_details( int index,String ) {
+Widget wine_details( int index,String  ) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
@@ -490,7 +490,7 @@ Widget Welcome_user_row() {
 }
 
 
- */
+*/
 //ye puri trial file he gmail ki
 
 import 'package:flutter/cupertino.dart';
@@ -688,7 +688,7 @@ Widget wine_details(int index, String img, String name, int price,
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
@@ -705,104 +705,67 @@ Widget wine_details(int index, String img, String name, int price,
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            Column(
-              children: [
-                Container(
-                  width: 200,
-                  child: Text(
-                    '${name}',overflow: TextOverflow.clip,
+            SizedBox(
+              width: 190,
+              child: Column(
+
+                children: [
+                  Text(
+                    '${name}',
+                    overflow: TextOverflow.clip,
                     style: TextStyle(color: Colors.white, fontSize: 14),
                   ),
-
-                ),
-
-                Row(
-                  children: [
-                    Text(
-                      '${categories},',
-                      style: TextStyle(color: Colors.white, fontSize: 14),
-                    ),
-                    Text(
-                      '${country}',
-                      style: TextStyle(color: Colors.pink, fontSize: 14),
-                    ),
-
-                  ],
-                ),
-                Row(
-                  children: [
-                    Text(
-                      "\$${price}",
-                      style: TextStyle(color: Colors.white, fontSize: 15),
-                    ),
-                    Text(
-                      '   ⭐',
-                      style: TextStyle(color: Colors.pink, fontSize: 15),
-                    ),
-                    Text(
-                      '${ratings}',
-                      style: TextStyle(color: Colors.white, fontSize: 15),
-                    ),
-                  ],
-                ),
-
-                Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(4),
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.pink.shade500,
-                        borderRadius: BorderRadius.circular(20),
-                        // border: Border.all(color: Colors.white, width: 0.7),
+                  Row(
+                    children: [
+                      Text(
+                        // overflow: TextOverflow.clip,
+                        '${categories},',
+                        style: TextStyle(color: Colors.white, fontSize: 14),
                       ),
-                      child: const Center(
-                        child: Icon(
-                          Icons.remove,
-                          color: Colors.white,
+                      Text(
+                        '${country}',
+                        style: TextStyle(color: Colors.pink, fontSize: 14),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        "\$${price}",
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      ),
+                      Text(
+                        '   ⭐',
+                        style: TextStyle(color: Colors.pink, fontSize: 15),
+                      ),
+                      Text(
+                        '${ratings}',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: 140,
+                    height: 40,
+                    margin: EdgeInsets.all(4),
+                    decoration: BoxDecoration(
+                      color: Color(0xff404040),
+                      borderRadius: BorderRadius.circular(10),
+                      // border: Border.all(color: Colors.white, width: 0.7),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Buy Now',
+                        style: TextStyle(
+                          color: Colors.pink,
+                          fontSize: 20,
+                          letterSpacing: 2,
                         ),
                       ),
                     ),
-                    Container(
-                      width: 130,
-                      height: 40,
-                      margin: EdgeInsets.all(4),
-                      decoration: BoxDecoration(
-                        color: Color(0xff404040),
-                        borderRadius: BorderRadius.circular(10),
-                        // border: Border.all(color: Colors.white, width: 0.7),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          'Buy Now',
-                          style: TextStyle(
-                            color: Colors.pink,
-                            fontSize: 20,
-                            letterSpacing: 2,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 40,
-                      height: 40,
-                      margin: EdgeInsets.all(4),
-                      decoration: BoxDecoration(
-                        color: Colors.pink.shade500,
-                        borderRadius: BorderRadius.circular(20),
-                        // border: Border.all(color: Colors.white, width: 0.7),
-                      ),
-                      child: const Center(
-                        child: Icon(
-                          Icons.add,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -821,7 +784,7 @@ Container advertisement_Special_offers() {
     // alignment: Alignment.center,
     // color: Colors.white,
     decoration: BoxDecoration(
-      // border: Border.all(color: Colors.white54, width: 0.5),
+        // border: Border.all(color: Colors.white54, width: 0.5),
         borderRadius: BorderRadius.circular(15),
         color: Color(0xff404040)),
     child: Row(
@@ -845,7 +808,7 @@ Container advertisement_Special_offers() {
                     ),
                     TextSpan(
                       text:
-                      "\nLet's have a wintage and old taste and \n scotch Whiskey",
+                          "\nLet's have a wintage and old taste and \n scotch Whiskey",
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 10,
@@ -917,7 +880,7 @@ Container Search_bar_row() {
     // alignment: Alignment.center,
     // color: Colors.white,
     decoration: BoxDecoration(
-      // border: Border.all(color: Colors.white54, width: 0.5),
+        // border: Border.all(color: Colors.white54, width: 0.5),
         borderRadius: BorderRadius.circular(15),
         color: Color(0xff404040)),
     child: Row(

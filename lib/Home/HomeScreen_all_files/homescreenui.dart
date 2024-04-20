@@ -102,6 +102,11 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                 colors: [
                   Color(0xff230b21),
                   Color(0xff0b1a1a),
+                  Color(0xff010127),
+                  Color(0xff120321),
+                  // Color(0xff2b1b17),
+                  // Color(0xff362832),
+
                 ],
                 radius: 1,
                 center: const Alignment(0.8, 0),

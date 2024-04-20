@@ -64,9 +64,12 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
-    - Assets/Images/pexels-brett-jordan-2308939.jpg
+    - Assets/Images/images_bg/images_1.png
+    - Assets/Images/images_bg/images_2.png
+    - Assets/Images/images_bg/images_3.png
+    - Assets/Images/images_bg/images_4.png
+#    - Assets/Images/pexels-brett-jordan-2308939.jpg
     - Assets/Images/pexels-kenneth-2912108.jpg
-    - Assets/Images/pexels-brett-jordan-2897305.jpg
     - Assets/Images/pexels-brett-jordan-18847863.jpg
     - Assets/Images/pexels-garrett-morrow-696618.jpg
     - Assets/Images/pexels-isabella-mendes-340996.jpg

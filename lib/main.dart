@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 // import 'package:wine_ecommerce_app/Home/HomeScreen_all_files/Home_screen_ui.dart';
 
 import 'Home/HomeScreen_all_files/homescreenui.dart';
-import 'Home/all_Cart_files/cart.dart';
+import 'Home/all_Cart_files/Detailscreen.dart';
+import 'Home/all_detail_files/Detailscreen.dart';
 void main()
 {
   runApp(MyApp(),);
@@ -15,12 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: Cartui(),
-      routes: {
-        '/':(context)=>const HomeScreenUi(),
-        '/cartscreen':(context)=>const Cartui(),
+      home: detailScreen(),
+      // routes: {
+        // '/':(context)=>const HomeScreenUi(),
+        // '/cartscreen':(context)=>const Cartui(),
 
-      },
+      // },
     );
   }
 }
