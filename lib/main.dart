@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:wine_ecommerce_app/Home/HomeScreen_all_files/Home_screen_ui.dart';
+// import 'package:wine_ecommerce_app/Home/HomeScreen_all_files/Home_screen_ui.dart';
 
-import 'Home/Component/homescreenui.dart';
+import 'Home/HomeScreen_all_files/homescreenui.dart';
 import 'Home/all_Cart_files/cart.dart';
 void main()
 {
@@ -15,30 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreenUi(),
+      home: Cartui(),
     );
   }
 }
-// class HomeScreen extends StatefulWidget {
-//   const HomeScreen({super.key});
-//
-//   @override
-//   State<HomeScreen> createState() => _HomeScreenState();
-// }
-//
-// class _HomeScreenState extends State<HomeScreen> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Column(
-//         children: [
-//           Container(
-//             color: Color(0xff282828),
-//             height: double.infinity,
-//             width: double.infinity,
-//           )
-//         ],
-//       ),
-//     );
-//   }
-// }
+
