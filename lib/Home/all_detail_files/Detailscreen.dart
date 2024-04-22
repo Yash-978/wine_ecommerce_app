@@ -270,7 +270,8 @@ class _XdetailScreenState extends State<XdetailScreen> {
                                           ),
                                           Text(
                                               wineList[selectedindex]['volume'],
-                                            style: TextStyle(
+                                            style:
+                                            TextStyle(
                                                 color: Colors.white),
                                           ),
                                         ],
@@ -286,35 +287,25 @@ class _XdetailScreenState extends State<XdetailScreen> {
                                             mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
                                             children: [
-                                              InkWell(
-                                                onTap: () {
-                                                  setState(() {
-                                                    // selectedindex;
-                                                    if(wineList[index]['count']>0)
-
-                                                      wineList[index]['count']--;
-                                                  });
-                                                },
-                                                child: Container(
-                                                  height: 25,
-                                                  width: 25,
-                                                  decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                      color: Color(0xffE5CDA7),
-                                                    ),
-                                                    borderRadius: BorderRadius
-                                                        .circular(3),
+                                              Container(
+                                                height: 25,
+                                                width: 25,
+                                                decoration: BoxDecoration(
+                                                  border: Border.all(
+                                                    color: Color(0xffE5CDA7),
                                                   ),
-                                                  child: Align(
-                                                      alignment: Alignment
-                                                          .center,
-                                                      child: Icon(
-                                                        Icons.remove,
-                                                        color: Color(
-                                                            0xffE5CDA7),
-                                                        size: 15,
-                                                      )),
+                                                  borderRadius: BorderRadius
+                                                      .circular(3),
                                                 ),
+                                                child: Align(
+                                                    alignment: Alignment
+                                                        .center,
+                                                    child: Icon(
+                                                      Icons.remove,
+                                                      color: Color(
+                                                          0xffE5CDA7),
+                                                      size: 15,
+                                                    )),
                                               ),
                                               Container(
                                                 height: 25,
@@ -330,39 +321,32 @@ class _XdetailScreenState extends State<XdetailScreen> {
                                                     alignment: Alignment
                                                         .center,
                                                     child: Text(
-                                                        wineList[selectedindex]['count'],
+                                                        '\$$count',
                                                       style: TextStyle(
                                                           color: Color(
                                                               0xffE5CDA7),
                                                           fontSize: 13),
                                                     )),
                                               ),
-                                              InkWell(
-                                                onTap: () {
-                                                  setState(() {
-                                                    wineList[selectedindex]['count'];
-                                                  });
-                                                },
-                                                child: Container(
-                                                  height: 25,
-                                                  width: 25,
-                                                  decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                      color: Color(0xffE5CDA7),
-                                                    ),
-                                                    borderRadius: BorderRadius
-                                                        .circular(3),
+                                              Container(
+                                                height: 25,
+                                                width: 25,
+                                                decoration: BoxDecoration(
+                                                  border: Border.all(
+                                                    color: Color(0xffE5CDA7),
                                                   ),
-                                                  child: Align(
-                                                      alignment: Alignment
-                                                          .center,
-                                                      child: Icon(
-                                                        Icons.add,
-                                                        color: Color(
-                                                            0xffE5CDA7),
-                                                        size: 15,
-                                                      )),
+                                                  borderRadius: BorderRadius
+                                                      .circular(3),
                                                 ),
+                                                child: Align(
+                                                    alignment: Alignment
+                                                        .center,
+                                                    child: Icon(
+                                                      Icons.add,
+                                                      color: Color(
+                                                          0xffE5CDA7),
+                                                      size: 15,
+                                                    )),
                                               ),
                                             ],
                                           ),
@@ -510,4 +494,4 @@ class _XdetailScreenState extends State<XdetailScreen> {
     );
   }
 }
-// int count=0;
+int count=0;
