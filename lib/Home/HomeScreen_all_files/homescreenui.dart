@@ -130,7 +130,7 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                     wineList.length,
                         (index) => InkWell(
                           onTap: () {
-                            Navigator.pushNamed(context, '/cartscreen');
+                            Navigator.pushNamed(context, '/detailscreen');
                           },
                           child: wine_details(index,
                               wineList[index]['img'],
@@ -139,7 +139,7 @@ class _HomeScreenUiState extends State<HomeScreenUi> {
                               wineList[index]['country'],
                               wineList[index]['categories'],
                               wineList[index]['ratings']),
-                        )),
+                        ),),
 
                 ],
               ),

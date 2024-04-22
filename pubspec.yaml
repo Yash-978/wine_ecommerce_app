@@ -68,9 +68,10 @@ flutter:
     - Assets/Images/images_bg/images_2.png
     - Assets/Images/images_bg/images_3.png
     - Assets/Images/images_bg/images_4.png
+    - Assets/Images/images_bg/images_5.png
 #    - Assets/Images/pexels-brett-jordan-2308939.jpg
     - Assets/Images/pexels-kenneth-2912108.jpg
-    - Assets/Images/pexels-brett-jordan-18847863.jpg
+#    - Assets/Images/pexels-brett-jordan-18847863.jpg
     - Assets/Images/pexels-garrett-morrow-696618.jpg
     - Assets/Images/pexels-isabella-mendes-340996.jpg
     - Assets/Images/pexels-maria-geller-2127005.jpg

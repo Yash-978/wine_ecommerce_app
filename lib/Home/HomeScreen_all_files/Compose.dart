@@ -695,13 +695,15 @@ Widget wine_details(int index, String img, String name, int price,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
-              height: 130,
+              height: 200,
               width: 160,
               decoration: BoxDecoration(
+                // shape: BoxShape.circle,
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(img),
                 ),
+                border: Border.all(color: Colors.white10,),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
@@ -710,21 +712,24 @@ Widget wine_details(int index, String img, String name, int price,
               child: Column(
 
                 children: [
-                  Text(
-                    '${name}',
-                    overflow: TextOverflow.clip,
-                    style: TextStyle(color: Colors.white, fontSize: 14),
+                  Align(
+                    alignment : Alignment.centerLeft,
+                    child: Text(
+                      '${name}',
+                      overflow: TextOverflow.clip,
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
                   ),
                   Row(
                     children: [
                       Text(
                         // overflow: TextOverflow.clip,
-                        '${categories},',
-                        style: TextStyle(color: Colors.white, fontSize: 14),
+                        ' ${categories},',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                       Text(
-                        '${country}',
-                        style: TextStyle(color: Colors.pink, fontSize: 14),
+                        '  ${country}',
+                        style: TextStyle(color: Colors.pink, fontSize: 15),
                       ),
                     ],
                   ),
@@ -732,7 +737,7 @@ Widget wine_details(int index, String img, String name, int price,
                     children: [
                       Text(
                         "\$${price}",
-                        style: TextStyle(color: Colors.white, fontSize: 15),
+                        style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                       Text(
                         '   ⭐',
@@ -740,26 +745,29 @@ Widget wine_details(int index, String img, String name, int price,
                       ),
                       Text(
                         '${ratings}',
-                        style: TextStyle(color: Colors.white, fontSize: 15),
+                        style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                     ],
                   ),
-                  Container(
-                    width: 140,
-                    height: 40,
-                    margin: EdgeInsets.all(4),
-                    decoration: BoxDecoration(
-                      color: Color(0xff404040),
-                      borderRadius: BorderRadius.circular(10),
-                      // border: Border.all(color: Colors.white, width: 0.7),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Buy Now',
-                        style: TextStyle(
-                          color: Colors.pink,
-                          fontSize: 20,
-                          letterSpacing: 2,
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      width: 150,
+                      height: 40,
+                      margin: EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        color: Color(0xffE83456),
+                        borderRadius: BorderRadius.circular(10),
+                        // border: Border.all(color: Colors.white, width: 0.7),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          'Buy Now',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            letterSpacing: 2,
+                          ),
                         ),
                       ),
                     ),
