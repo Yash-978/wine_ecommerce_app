@@ -23,16 +23,10 @@ class MyApp extends StatelessWidget {
       // home: detailScreen(),
       // home: HomeScreenUi(),
       routes: {
-        '/homescreen':(context)=>const HomeScreenUi(),
-        '/detailscreen':(context)=>const detailScreen(),
-
-
+        '/':(context)=> HomeScreenUi(),
+        '/detail':(context)=> XdetailScreen(),
+        '/cart':(context)=> cartScreen(),
       },
-      // routes: {
-        // '/':(context)=>const HomeScreenUi(),
-        // '/cartscreen':(context)=>const Cartui(),
-
-      // },
     );
   }
 }

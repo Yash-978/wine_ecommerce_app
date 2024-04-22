@@ -18,9 +18,9 @@ List wineList = [
     'name': 'Barossa Valley Shiraz',
     'categories': 'Rum',
     'country': 'UAE',
-    'price': 100,
+    'price': 98,
     'ratings': '5',
-    'img': 'Assets/Images/images_bg/images_5.png',
+    'img': 'Assets/Images/pexels-tanya-gorelova-3934056.jpg',
     'description':'Indulge in the bold and robust flavors of Barossa Valley Shiraz, a wine that embodies the essence of the Australian terroir. Rich and full-bodied, this Shiraz offers a symphony of dark fruit flavors, hints of spice, and a velvety smooth texture that coats the palate. Sourced from the prestigious Barossa Valley region, known for its ancient soils and Mediterranean climate, this wine reflects the unique characteristics of its terroir, resulting in a wine of exceptional depth and complexity.',
     'taste':'Full-bodied, rich, with notes of dark fruits, spice, and a hint of chocolate.',
     'quantity':'750ml',
@@ -65,3 +65,4 @@ List wineCategories = [
     'Beer',
   }
 ];
+int selectedindex=0;
