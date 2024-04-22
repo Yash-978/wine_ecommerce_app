@@ -547,31 +547,10 @@ class _XdetailScreenState extends State<XdetailScreen> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      SizedBox(
-                        height: 40,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                                height: 35,
-                                width: 32,
-                                margin: EdgeInsets.all(6),
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  // border :Border.all(color: )
-                                ),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.of(context).pop('/');
-                                  },
-                                  child: Icon(
-                                    Icons.arrow_back_rounded,
-                                    color: Colors.black,
-                                    size: 25,
-                                  ),
-                                )),
-                            Container(
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
                               height: 35,
                               width: 32,
                               margin: EdgeInsets.all(6),
@@ -580,14 +559,32 @@ class _XdetailScreenState extends State<XdetailScreen> {
                                 borderRadius: BorderRadius.circular(15),
                                 // border :Border.all(color: )
                               ),
-                              child: Icon(
-                                Icons.favorite,
-                                color: Color(0xffD12546),
-                                size: 25,
-                              ),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pop('/');
+                                },
+                                child: Icon(
+                                  Icons.arrow_back_rounded,
+                                  color: Colors.black,
+                                  size: 25,
+                                ),
+                              )),
+                          Container(
+                            height: 35,
+                            width: 32,
+                            margin: EdgeInsets.all(6),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              // border :Border.all(color: )
                             ),
-                          ],
-                        ),
+                            child: Icon(
+                              Icons.favorite,
+                              color: Color(0xffD12546),
+                              size: 25,
+                            ),
+                          ),
+                        ],
                       ),
                       detail_Box(context),
                     ],
@@ -701,8 +698,8 @@ class _XdetailScreenState extends State<XdetailScreen> {
                         alignment: Alignment.topLeft,
                         child: Text(
                           overflow: TextOverflow.clip,
-                          'name',
-                          // wineList[selectedindex]['name'],
+                          // 'name',
+                          wineList[selectedindex]['name'].toString(),
                           style: TextStyle(
                               color: Colors.white),
                         ),
@@ -742,10 +739,14 @@ class _XdetailScreenState extends State<XdetailScreen> {
                             style: TextStyle(
                                 color: Color(0xffE5CDA7)),
                           ),
-                          Text(
-                            '\n'+wineList[selectedindex]['producer'],
-                            style: TextStyle(
-                              color: Colors.white,
+                          SizedBox(
+                            width: 150,
+                            child: Text(
+                              overflow: TextOverflow.clip,
+                              '\n'+wineList[selectedindex]['producer'],
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ],
