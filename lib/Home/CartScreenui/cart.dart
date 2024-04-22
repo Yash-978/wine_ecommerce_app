@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class cartScreen extends StatefulWidget {
@@ -22,9 +23,14 @@ class _cartScreenState extends State<cartScreen> {
               style: TextStyle(
                   color: Color(0xffE5CDA7), fontWeight: FontWeight.bold),
             ),
-            leading: Icon(
-              Icons.arrow_back_rounded,
-              color: Color(0xffE5CDA7),
+            leading: GestureDetector(
+              onTap: () {
+                Navigator.of(context).pop('/detail');
+              },
+              child: Icon(
+                Icons.arrow_back_rounded,
+                color: Color(0xffE5CDA7),
+              ),
             ),
             actions: [
               Padding(
@@ -85,15 +91,18 @@ class _cartScreenState extends State<cartScreen> {
                                 ],
                               ),
                             ),
-                            Container(
-                              width: 50,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Color(0xffD12648),
-                                borderRadius: BorderRadius.circular(20),
-                                border: Border.all(color: Colors.white,width: 0.1),
+                            GestureDetector(
+
+                              child: Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  color: Color(0xffD12648),
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(color: Colors.white,width: 0.1),
+                                ),
+                                child: Icon(Icons.delete,color: Colors.white,),
                               ),
-                              child: Icon(Icons.delete,color: Colors.white,),
                             )
                           ],
                         ),

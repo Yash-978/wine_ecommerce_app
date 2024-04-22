@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'Home/CartScreenui/cart.dart';
 import 'Home/HomeScreen_all_files/Compose.dart';
 import 'Home/HomeScreen_all_files/homescreenui.dart';
-import 'Home/all_Cart_files/Detailscreen.dart';
+
 import 'Home/all_detail_files/Detailscreen.dart';
 void main()
 {
@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
       // home: detailScreen(),
       // home: HomeScreenUi(),
       routes: {
-        '/':(context)=> HomeScreenUi(),
-        '/detail':(context)=> XdetailScreen(),
-        '/cart':(context)=> cartScreen(),
+        '/':(context)=> const HomeScreenUi(),
+        '/detail':(context)=> const XdetailScreen(),
+        '/cart':(context)=> const cartScreen(),
       },
     );
   }
