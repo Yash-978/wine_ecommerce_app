@@ -92,99 +92,103 @@ class _XdetailScreenState extends State<XdetailScreen> {
                       detail_Box(context),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      height: 330,
-                      width: 390,
-                      decoration: BoxDecoration(
-                          color: Color(0xff222126),
-                          gradient: RadialGradient(
-                            colors: [
-                              Color(0xff230b21),
-                              Color(0xff0b1a1a),
-                              // Color(0xff010127),
-                              Color(0xff120321),
-                              // Color(0xff2b1b17),
-                              // Color(0xff362832),
-                            ],
-                            radius: 1.5,
-                            center: const Alignment(0.8, 0),
-                          ),
-                          border: Border.all(color: Colors.white10),
-                          borderRadius: BorderRadius.circular(15)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: SingleChildScrollView(
-                          physics: BouncingScrollPhysics(),
-                          scrollDirection: Axis.vertical,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            // crossAxisAlignment: CrossAxisAlignment.,
-                            children: [
-                              Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Product Detail ',
-                                  style: TextStyle(
-                                      color: Color(0xffE5CDA7), fontSize: 20),
-                                ),
-                              ),
-                              Align(
-                                alignment: Alignment.centerLeft,
-                                child: SizedBox(
-                                  width: 345,
-                                  child: Text(
-                                    overflow: TextOverflow.clip,
-                                    'dzfdn',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 15),
-                                  ),
-                                ),
-                              ),
-                              Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Taste :',
-                                  style: TextStyle(
-                                      color: Color(0xffE5CDA7), fontSize: 20),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 345,
-                                child: Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    overflow: TextOverflow.clip,
-                                    'fbfggfg',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 15),
-                                  ),
-                                ),
-                              ),
-                              Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Serve : ',
-                                  style: TextStyle(
-                                      color: Color(0xffE5CDA7), fontSize: 20),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 345,
-                                child: Text(
-                                  overflow: TextOverflow.clip,
-                                  'dfvdf',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 15),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  productDetailBox(selectedindex,
+                      wineList[selectedindex]['description'],
+                      wineList[selectedindex]['serve'],
+                      wineList[selectedindex]['taste']),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: Container(
+                  //     height: 330,
+                  //     width: 390,
+                  //     decoration: BoxDecoration(
+                  //         color: Color(0xff222126),
+                  //         gradient: RadialGradient(
+                  //           colors: [
+                  //             Color(0xff230b21),
+                  //             Color(0xff0b1a1a),
+                  //             // Color(0xff010127),
+                  //             Color(0xff120321),
+                  //             // Color(0xff2b1b17),
+                  //             // Color(0xff362832),
+                  //           ],
+                  //           radius: 1.5,
+                  //           center: const Alignment(0.8, 0),
+                  //         ),
+                  //         border: Border.all(color: Colors.white10),
+                  //         borderRadius: BorderRadius.circular(15)),
+                  //     // child: Padding(
+                  //     //   padding: const EdgeInsets.all(8.0),
+                  //     //   child: SingleChildScrollView(
+                  //     //     physics: BouncingScrollPhysics(),
+                  //     //     scrollDirection: Axis.vertical,
+                  //     //     child: Column(
+                  //     //       mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  //     //       // crossAxisAlignment: CrossAxisAlignment.,
+                  //     //       children: [
+                  //     //         Align(
+                  //     //           alignment: Alignment.centerLeft,
+                  //     //           child: Text(
+                  //     //             'Product Detail ',
+                  //     //             style: TextStyle(
+                  //     //                 color: Color(0xffE5CDA7), fontSize: 20),
+                  //     //           ),
+                  //     //         ),
+                  //     //         Align(
+                  //     //           alignment: Alignment.centerLeft,
+                  //     //           child: SizedBox(
+                  //     //             width: 345,
+                  //     //             child: Text(
+                  //     //               overflow: TextOverflow.clip,
+                  //     //               'dzfdn',
+                  //     //               style: TextStyle(
+                  //     //                   color: Colors.white, fontSize: 15),
+                  //     //             ),
+                  //     //           ),
+                  //     //         ),
+                  //     //         Align(
+                  //     //           alignment: Alignment.centerLeft,
+                  //     //           child: Text(
+                  //     //             'Taste :',
+                  //     //             style: TextStyle(
+                  //     //                 color: Color(0xffE5CDA7), fontSize: 20),
+                  //     //           ),
+                  //     //         ),
+                  //     //         SizedBox(
+                  //     //           width: 345,
+                  //     //           child: Align(
+                  //     //             alignment: Alignment.centerLeft,
+                  //     //             child: Text(
+                  //     //               overflow: TextOverflow.clip,
+                  //     //               'fbfggfg',
+                  //     //               style: TextStyle(
+                  //     //                   color: Colors.white, fontSize: 15),
+                  //     //             ),
+                  //     //           ),
+                  //     //         ),
+                  //     //         Align(
+                  //     //           alignment: Alignment.centerLeft,
+                  //     //           child: Text(
+                  //     //             'Serve : ',
+                  //     //             style: TextStyle(
+                  //     //                 color: Color(0xffE5CDA7), fontSize: 20),
+                  //     //           ),
+                  //     //         ),
+                  //     //         SizedBox(
+                  //     //           width: 345,
+                  //     //           child: Text(
+                  //     //             overflow: TextOverflow.clip,
+                  //     //             'dfvdf',
+                  //     //             style: TextStyle(
+                  //     //                 color: Colors.white, fontSize: 15),
+                  //     //           ),
+                  //     //         )
+                  //     //       ],
+                  //     //     ),
+                  //     //   ),
+                  //     // ),
+                  //   ),
+                  // ),
 
                   // ...List.generate(
                   //   wineList.length,
@@ -224,7 +228,7 @@ class _XdetailScreenState extends State<XdetailScreen> {
                   //         ),
                   //       ),
                   // ),
-                  // productDetailBox();
+                  // productDetailBox(),
                   // detail_Box(context),
                   Container(
                     height: 50,
@@ -529,7 +533,7 @@ class _XdetailScreenState extends State<XdetailScreen> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 330,
+        height: 290,
         width: 390,
         decoration: BoxDecoration(
             color: Color(0xff222126),
@@ -615,6 +619,9 @@ class _XdetailScreenState extends State<XdetailScreen> {
     );
   }
 }
+
+
+
 // Column detail_Box(int index,
 //     String name,
 //     String categories,
