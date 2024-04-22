@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+import '../HomeScreen_all_files/all_List.dart';
 
 class cartScreen extends StatefulWidget {
   const cartScreen({super.key});
@@ -48,71 +51,109 @@ class _cartScreenState extends State<cartScreen> {
             child: SingleChildScrollView(
               physics: BouncingScrollPhysics(),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Container(
-                        height: 250,
-                        width: 390,
-                        decoration: BoxDecoration(
-                          color: Color(0xff222126),
-                          borderRadius: BorderRadius.circular(25),
-                          border: Border.all(color: Colors.white10,width: 0.2)
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            height: 190,
+                            width: 390,
+                            decoration: BoxDecoration(
+                              color: Color(0xff222126),
+                              borderRadius: BorderRadius.circular(25),
+                              border: Border.all(color: Colors.white10,width: 0.2)
 
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Container(
-                              height: 200,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    'Assets/Images/images_bg/images_1.png',
-                                  )
-                                )
-                              ),
                             ),
-                            SizedBox(
-                              width: 220,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text('name',overflow:TextOverflow.clip,
-                              style: TextStyle(color: Colors.white,fontSize: 15),),
-                                  Text('categories',style: TextStyle(color: Colors.white,fontSize: 15),),
-                                  Text('price',style: TextStyle(color: Colors.white,fontSize: 15),),
-                                  Container(
-                                    height: 100,
-                                  )
-                                ],
-                              ),
-                            ),
-                            GestureDetector(
-
-                              child: Container(
-                                width: 50,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  color: Color(0xffD12648),
-                                  borderRadius: BorderRadius.circular(20),
-                                  border: Border.all(color: Colors.white,width: 0.1),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Container(
+                                  height: 200,
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          wineList[selectedindex]['img'],
+                                      )
+                                    )
+                                  ),
                                 ),
-                                child: Icon(Icons.delete,color: Colors.white,),
-                              ),
-                            )
-                          ],
-                        ),
-                      )
+                                Align(
+                                  alignment: Alignment.center,
+                                  child: SizedBox(
+                                    width: 220,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text(wineList[selectedindex]['name'],overflow:TextOverflow.clip,
+                                    style: TextStyle(color: Colors.white,fontSize: 20),),
+                                        Text(wineList[selectedindex]['categories'],style: TextStyle(color: Colors.pink,fontSize: 20),),
+                                        Text('\$'+wineList[selectedindex]['price'].toString(),style: TextStyle(color: Colors.white,fontSize: 20),),
+                                        Container(
+                                          height: 100,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      add_to_cart.removeAt(selectedindex);
+                                    });
+                                  },
+
+                                  child: Container(
+                                    width: 50,
+                                    height: 190,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xffD12648),
+                                      borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(color: Colors.white,width: 0.1),
+                                    ),
+                                    child: Icon(Icons.delete,color: Colors.white,),
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ],
-                  )
+                  ),
+                  Container(
+                        height: 40,
+                        width: 150,
+                        decoration: BoxDecoration(
+                        color: Color(0xffD22747),
+                        borderRadius: BorderRadius
+                        .circular(10),
+                        border: Border.all(
+                        color: Color(0xffD22747),
+                        ) /*Color(0xffE5CDA7)try this color instead on the border*/
+                        ),
+                            child: Align(
+                            alignment: Alignment.center,
+                            child: Text(
+                          'Purchase',
+                          style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight
+                          .bold),
+                        ),
+                        ),
+                        )
                 ],
+
               ),
             ),
-          )),
+          ),
+      ),
     );
   }
 }
