@@ -80,6 +80,8 @@ flutter:
     - Assets/Images/pexels-tanya-gorelova-3934056.jpg
     - Assets/Images/pexels-tanya-gorelova-3934057.jpg
     - Assets/Images/Profile_images/pexels-mohamed-abdelghaffar-771742.jpg
+#    - logo image
+    - Assets/Images/Logoimage/create logo for 7194e377-44e7-400e-a1a8-6afe3977da9d.png
 
 
     # An image asset can refer to one or more resolution-specific "variants", see
