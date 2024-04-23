@@ -110,3 +110,15 @@ List wineCategories = [
 ];
 int selectedindex=0;
 List add_to_cart=[];
+int amount=0;
+
+/*InkWell(
+                    onTap: () {
+                      setState(() {
+                        for(int i=0;i<add_to_cart.length;i++)
+                        {
+                          amount=(amount+add_to_cart[i]['price']).toInt();
+
+                        }
+                      });
+                    },*/

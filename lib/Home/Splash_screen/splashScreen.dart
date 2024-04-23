@@ -15,7 +15,7 @@ class _splashScreenState extends State<splashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 5), () {
+    Timer(Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -33,7 +33,11 @@ class _splashScreenState extends State<splashScreen> {
         decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Colors.deepPurple,
+                Color(0xff230b21),
+                Color(0xff0b1a1a),
+                Color(0xff010127),
+                Color(0xff120321),
+
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,

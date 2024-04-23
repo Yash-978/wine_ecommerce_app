@@ -4,6 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:wine_ecommerce_app/Home/CartScreenui/cart.dart';
 import 'package:wine_ecommerce_app/Home/HomeScreen_all_files/all_List.dart';
 
 class XdetailScreen extends StatefulWidget {
@@ -40,39 +41,42 @@ class _XdetailScreenState extends State<XdetailScreen> {
             // shape: BoxShape.rectangle,
             color: Color(0xff141519),
           ),
-          child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
 
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                              height: 35,
-                              width: 32,
-                              margin: EdgeInsets.all(6),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(15),
-                                // border :Border.all(color: )
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                            height: 35,
+                            width: 32,
+                            margin: EdgeInsets.all(6),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              // border :Border.all(color: )
+                            ),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).pop('/');
+                              },
+                              child: Icon(
+                                Icons.arrow_back_rounded,
+                                color: Colors.black,
+                                size: 25,
                               ),
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).pop('/');
-                                },
-                                child: Icon(
-                                  Icons.arrow_back_rounded,
-                                  color: Colors.black,
-                                  size: 25,
-                                ),
-                              )),
-                          Container(
+                            )),
+                        InkWell(
+                          onTap: () {
+                            selectedindex=index;
+                            Navigator.of(context).pushNamed('/cart');
+                          },
+                          child: Container(
                             height: 35,
                             width: 32,
                             margin: EdgeInsets.all(6),
@@ -82,26 +86,25 @@ class _XdetailScreenState extends State<XdetailScreen> {
                               // border :Border.all(color: )
                             ),
                             child: Icon(
-                              Icons.favorite,
+                              Icons.shopping_cart_rounded,
                               color: Color(0xffD12546),
                               size: 25,
                             ),
                           ),
-                        ],
-                      ),
-                      detail_Box(context),
-                    ],
-                  ),
-                  productDetailBox(selectedindex,
-                      wineList[selectedindex]['description'],
-                      wineList[selectedindex]['serve'],
-                      wineList[selectedindex]['taste']),
+                        ),
+                      ],
+                    ),
+                    detail_Box(context),
+                  ],
+                ),
+                productDetailBox(selectedindex,
+                    wineList[selectedindex]['description'],
+                    wineList[selectedindex]['serve'],
+                    wineList[selectedindex]['taste']),
+
                   InkWell(
                     onTap: () {
-                      // wineList[index]['name'];
-                      // wineList[index]['categories'];
-                      // wineList[index]['price'];
-                      add_to_cart.add(wineList[index]);
+                      add_to_cart.add(wineList[selectedindex]);
                       Navigator.of(context).pushNamed('/cart');
                     },
                     child: Container(
@@ -129,8 +132,8 @@ class _XdetailScreenState extends State<XdetailScreen> {
                       ),
                     ),
                   ),
-                ],
-              ),
+
+              ],
             ),
           ),
         ),
@@ -170,7 +173,7 @@ class _XdetailScreenState extends State<XdetailScreen> {
                   .spaceEvenly,
               children: [
                 Container(
-                  height: 400,
+                  height: 385,
                   width: 155,
                   decoration: BoxDecoration(
 
@@ -190,7 +193,7 @@ class _XdetailScreenState extends State<XdetailScreen> {
               children: [
                 Container(
                   height: 350,
-                  width: 220,
+                  width: 200,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                   ),
@@ -210,7 +213,7 @@ class _XdetailScreenState extends State<XdetailScreen> {
                       Row(
                         children: [
                           Text(
-                            "Taste 🍬 ",
+                            "Taste 🍬",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 10),
@@ -243,7 +246,7 @@ class _XdetailScreenState extends State<XdetailScreen> {
                                 color: Color(0xffE5CDA7)),
                           ),
                           SizedBox(
-                            width: 150,
+                            width: 130,
                             child: Text(
                               overflow: TextOverflow.clip,
                               '\n'+wineList[selectedindex]['producer'],
@@ -287,7 +290,7 @@ class _XdetailScreenState extends State<XdetailScreen> {
                       Align(
                         alignment: Alignment.topLeft,
                         child: SizedBox(
-                          width: 92,
+                          width: 100,
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment
                                 .start,
@@ -301,8 +304,8 @@ class _XdetailScreenState extends State<XdetailScreen> {
                                 });
                               },
                                 child: Container(
-                                  height: 25,
-                                  width: 25,
+                                  height: 30,
+                                  width: 30,
                                   decoration: BoxDecoration(
                                     border: Border.all(
                                       color: Color(0xffE5CDA7),
@@ -322,8 +325,8 @@ class _XdetailScreenState extends State<XdetailScreen> {
                                 ),
                               ),
                               Container(
-                                height: 25,
-                                width: 25,
+                                height: 30,
+                                width: 30,
                                 decoration: BoxDecoration(
                                   border: Border.all(
                                     color: Color(0xffE5CDA7),
@@ -335,11 +338,11 @@ class _XdetailScreenState extends State<XdetailScreen> {
                                     alignment: Alignment
                                         .center,
                                     child: Text(
-                                      '\$${wineList[index]['count']}',
+                                      '${wineList[index]['count']}',
                                       style: TextStyle(
                                           color: Color(
                                               0xffE5CDA7),
-                                          fontSize: 13),
+                                          fontSize: 22),
                                     )),
                               ),
                               InkWell(onTap: () {
@@ -349,8 +352,8 @@ class _XdetailScreenState extends State<XdetailScreen> {
                                 });
                               },
                                 child: Container(
-                                  height: 25,
-                                  width: 25,
+                                  height: 30,
+                                  width: 30,
                                   decoration: BoxDecoration(
                                     border: Border.all(
                                       color: Color(0xffE5CDA7),
@@ -517,3 +520,4 @@ class _XdetailScreenState extends State<XdetailScreen> {
 }
 int count=0;
 var index=0;
+int amt =0;
