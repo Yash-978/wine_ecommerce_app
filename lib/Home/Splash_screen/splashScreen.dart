@@ -43,6 +43,7 @@ class _splashScreenState extends State<splashScreen> {
               end: Alignment.bottomCenter,
             ),
             image: DecorationImage(
+              fit: BoxFit.cover,
                 image: AssetImage(
               'Assets/Images/Logoimage/create logo for 7194e377-44e7-400e-a1a8-6afe3977da9d.png',
             ))),

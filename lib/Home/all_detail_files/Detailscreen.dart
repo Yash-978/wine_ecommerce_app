@@ -112,7 +112,6 @@ class _XdetailScreenState extends State<XdetailScreen> {
                       width: 360,
                       decoration: BoxDecoration(
                         color: Color(0xffD12546),
-
                         // border: Border.all(color: Colors.white10),
                         borderRadius: BorderRadius.circular(30),
                       ),
@@ -387,32 +386,7 @@ class _XdetailScreenState extends State<XdetailScreen> {
                           ),
                         ),
                       ), //price text
-                      // Align(
-                      // alignment: Alignment.topLeft,
-                      // child: Container(
-                      // height: 40,
-                      // width: 150,
-                      // decoration: BoxDecoration(
-                      // color: Color(0xffD22747),
-                      // borderRadius: BorderRadius
-                      // .circular(10),
-                      // border: Border.all(
-                      // color: Color(0xffD22747),
-                      // ) /*Color(0xffE5CDA7)try this color instead on the border*/
-                      // ),
-                      // child: Align(
-                      // alignment: Alignment.center,
-                      // child: Text(
-                      // 'Purchase',
-                      // style: TextStyle(
-                      // color: Colors.white,
-                      // fontSize: 15,
-                      // fontWeight: FontWeight
-                      // .bold),
-                      // ),
-                      // ),
-                      // ),
-                      // ) //purchase box
+                     
                     ],
                   ),
                 ),
@@ -518,6 +492,4 @@ class _XdetailScreenState extends State<XdetailScreen> {
     );
   }
 }
-int count=0;
-var index=0;
-int amt =0;
+

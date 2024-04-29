@@ -932,7 +932,7 @@ Widget Welcome_user_row() {
             image: DecorationImage(
               fit: BoxFit.fill,
               image: AssetImage(
-                  'Assets/Images/Profile_images/pexels-mohamed-abdelghaffar-771742.jpg'),
+                  'Assets/Images/Profile_images/pexels-moh-adbelghaffar-771742.jpg'),
             ),
             // image: Image.asset(name),
             border: Border.all(color: Colors.black),

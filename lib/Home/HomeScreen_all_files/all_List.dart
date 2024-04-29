@@ -1,6 +1,6 @@
 List wineList = [
   {
-    'name': 'ei JIMODOR ',
+    'name': 'Ei JIMODOR ',
     'categories': 'Rum',
     'country': 'UAE',
     'price': 100,
@@ -108,9 +108,16 @@ List wineCategories = [
     'Beer',
   }
 ];
-int selectedindex=0;
+
 List add_to_cart=[];
-int amount=0;
+double amount=0;
+double total=0;
+int selectedindex=0;
+int qty=0;
+int count=0;
+var index=0;
+int amt =0;
+
 
 /*InkWell(
                     onTap: () {

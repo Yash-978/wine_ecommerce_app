@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wine_ecommerce_app/Home/HomeScreen_all_files/all_List.dart';
+import 'package:wine_ecommerce_app/Home/all_detail_files/Detailscreen.dart';
+
+// import '../all_detail_files/Detailscreen.dart';
 class checkList extends StatefulWidget {
   const checkList({super.key});
 
